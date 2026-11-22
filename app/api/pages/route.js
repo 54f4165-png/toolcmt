@@ -1,0 +1,1 @@
+import {auth,response} from '../../../lib/admin';import {db} from '../../../lib/admin';export async function GET(req){try{await auth(req);const s=await db().ref('connections/pages').get();return Response.json({pages:Object.entries(s.val()||{}).map(([id,v])=>({id,name:v.name}))})}catch(e){return response(e)}}

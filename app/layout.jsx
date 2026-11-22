@@ -1,0 +1,1 @@
+import "./style.css"; export const metadata={title:"Facebook Multi-Page Admin"}; export default function Root({children}){return <html lang="vi"><body>{children}</body></html>}
